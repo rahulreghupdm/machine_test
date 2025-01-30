@@ -1,16 +1,36 @@
-# sample_machine_test
+Dependencies
+sqflite: For local SQLite database operations.
 
-A new Flutter project.
+http: For making HTTP requests to fetch data from the API.
 
-## Getting Started
+provider: For state management.
 
-This project is a starting point for a Flutter application.
+Add these dependencies to your pubspec.yaml file:
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+lib/
+├── controller/
+│   ├── db_helper.dart
+│   └── fetch_controller.dart
+├── model/
+│   └── post_model.dart
+└── view/
+    └── list_page_view.dart
+
+
+Database Helper
+The DatabaseHelper class is responsible for managing the SQLite database. It includes methods for initializing the database, creating the table, inserting posts, fetching posts, and clearing the database.
+
+
+Fetch Controller
+The FetchController class is responsible for fetching data from the API, storing it in the local database, and managing the state of the application. It uses the ChangeNotifier to notify listeners when the state changes.
+
+Post Model
+The Post class represents the structure of a post. It includes a factory constructor to create a Post object from JSON and a method to convert a Post object to a map.
+
+List Page View
+The ListPageView class is a stateless widget that displays the list of posts. It uses the Consumer widget to listen for changes in the FetchController and updates the UI accordingly.
+
+
+

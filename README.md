@@ -5,20 +5,6 @@ http: For making HTTP requests to fetch data from the API.
 
 provider: For state management.
 
-Add these dependencies to your pubspec.yaml file:
-
-
-
-lib/
-├── controller/
-│   ├── db_helper.dart
-│   └── fetch_controller.dart
-├── model/
-│   └── post_model.dart
-└── view/
-    └── list_page_view.dart
-
-
 Database Helper
 The DatabaseHelper class is responsible for managing the SQLite database. It includes methods for initializing the database, creating the table, inserting posts, fetching posts, and clearing the database.
 
